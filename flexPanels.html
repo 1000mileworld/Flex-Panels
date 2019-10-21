@@ -70,9 +70,9 @@
 	    .panel.open-active > *:last-child {transform: translateY(0);}
 
 	    .panel.center.open-active > *:first-child {transform: translateY(55%)}
-	    .panel.center.open-active > *:last-child {transform: translateY(-55%)}
+	    .panel.center.open-active > *:last-child {transform: translateY(-50%)}
 
-	    .panel p {
+	    .panel p{
 	      text-transform: uppercase;
 	      font-family: 'Amatic SC', cursive;
 	      text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
@@ -88,6 +88,11 @@
 	      font-size: 40px;
 	    }
 
+	    .centerBox {display: flex; flex-direction: column;}
+	    .content {background-color: #FAD7A0; color: black; margin: -4em; padding: 2em; border-style: double; border-width: 5px; font-size: 18px; text-align: left; width: 80%;}
+
+}
+
   </style>
 
 </head>
@@ -102,7 +107,17 @@
     <div class="panel center panel2">
       <p>1000</p>
       <p>Mile</p>
-      <p>World</p>
+      <div class="centerBox">
+      	<p>World</p>
+      	<div class="content" id="noClick">
+      		blah
+      		<br>
+      		<br>
+      		<label for="base">Base Color</label>
+    		<input id="base" type="color" name="base" value="#ffc600">
+
+      	</div>
+  	  </div>
     </div>
     <div class="panel panel3">
       <p>Expand</p>
@@ -113,9 +128,10 @@
 
 	<script>
 	    const panels = document.querySelectorAll('.panel');
+	    let inContent = false;
 
 	    function toggleOpen(){
-	      this.classList.toggle('open'); //adds class "open" if it's not there, remove it if it is
+	      if(!inContent){this.classList.toggle('open');} //adds class "open" if it's not there, remove it if it is
 	    }
 
 	    function toggleActive(e){
@@ -124,8 +140,23 @@
 	        this.classList.toggle('open-active');
 	      }
 	    }
-	    panels.forEach(panel => panel.addEventListener('click',toggleOpen));
-	    panels.forEach(panel => panel.addEventListener('transitionend',toggleActive));
+
+		window.onload = initDivMouseOver; //disable toggle if mouse is over content div box
+		function initDivMouseOver()   {
+		   	let div = document.getElementById("noClick");
+			div.onmouseover = function()   {
+			    //this.mouseIsOver = true;
+			    inContent = true;
+		   	};
+		   	div.onmouseout = function()   {
+		      	//this.mouseIsOver = false;
+		      	inContent = false;
+		   	}
+		}
+
+		panels.forEach(panel => panel.addEventListener('click',toggleOpen));
+		panels.forEach(panel => panel.addEventListener('transitionend',toggleActive));
+
 	</script>
 
 </body>
