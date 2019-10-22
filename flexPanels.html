@@ -3,6 +3,9 @@
 <head>
 	<title>1000 Mile World</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		//let bigR = 35*var(--size)/30;
+	</script>
 </head>
 <body>
 
@@ -21,31 +24,33 @@
         	<g class="bubbles-large" stroke-width="7">           
 	            <g>
 	                <g transform="translate(10 940)">
-	                    <circle cx="35" cy="35" r="35"/>
+	                    <circle id="big1" cx="35" cy="35" r="35"/>
 	                </g>
+	            </g>
+	            <!--
 	            <g>
 	                <g transform="translate(373 940)">
-	                    <circle cx="35" cy="35" r="35"/>
+	                    <circle cx="35" cy="35" r=bigR/>
 	                </g>
 	            </g>
 	            <g>
 	                <g transform="translate(408 940)">
-	                    <circle cx="35" cy="35" r="35"/>
+	                    <circle cx="35" cy="35" r=bigR/>
 	                </g>
 	            </g>
 	            <g>
 	                <g transform="translate(621 940)">
-	                    <circle cx="35" cy="35" r="35"/>
+	                    <circle cx="35" cy="35" r=bigR/>
 	                </g>
 	            </g>
 	            <g>
 	                <g transform="translate(179 940)">
-	                    <circle cx="35" cy="35" r="35"/>
+	                    <circle cx="35" cy="35" r=bigR/>
 	                </g>
 	            </g>
-	            </g>
+-->
         	</g>
-
+<!--
         	<g class="bubbles-small" stroke-width="4">
 	            <g>
 	                <g transform="translate(147 984)">
@@ -98,7 +103,7 @@
 	                </g>
 	            </g>
         	</g>
-
+-->
         	</svg>
 
       	</div>
@@ -110,9 +115,15 @@
       		blah
       		<br>
       		<br>
-      		<label for="base">Base Color</label>
-    		<input id="base" type="color" name="base" value="#ffc600">
+      		
+      		<label for="bcolor">Bubble Color</label>
+    		<input id="bcolor" type="color" name="bcolor" value="#ffffff">
 
+    		<label for="size"> Size Factor: </label>
+    		<input id="size" type="range" name="size" min="10" max="90" value="30">
+
+    		<label for="speed"> Speed Factor: </label>
+    		<input id="speed" type="range" name="speed" min="25" max="100" value="50">
       	</div>
       	
   	  </div>
@@ -155,7 +166,21 @@
 		panels.forEach(panel => panel.addEventListener('click',toggleOpen));
 		panels.forEach(panel => panel.addEventListener('transitionend',toggleActive));
 
-	</script>
+
+		//controls
+		const inputs = document.querySelectorAll('input'); //returns node list
+    
+	    function handleUpdate(){
+	      //const suffix = this.dataset.sizing || ''; //try to append px or nothing (for base color)
+	      document.documentElement.style.setProperty(`--${this.name}`,this.value);
+
+	      document.getElementById('big1').setAttribute('r', "90/30*35")
+	    }
+
+	    //listen for change event on each of the inputs
+	    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+	    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate)); //live update before you release mouse
+		</script>
 
 </body>
 </html>
