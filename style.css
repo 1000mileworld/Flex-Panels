@@ -65,7 +65,7 @@ body {
 .panel.open-active > *:last-child {transform: translateY(0);}
 
 .panel.center.open-active > *:first-child {transform: translateY(50%)}
-.panel.center.open-active > *:last-child {transform: translateY(-50%)}
+.panel.center.open-active > *:last-child {transform: translateY(-30%)}
 
 .panel p{
   text-transform: uppercase;
@@ -84,7 +84,8 @@ body {
 }
 
 .centerBox {display: flex; flex-direction: column;}
-.content {background-color: #3366ff; color: white; margin: -4em; padding: 2em; border-style: double; border-width: 5px; font-size: 18px; text-align: left; width: 80%;}
+.content {background-color: #ffffcc; color: black; margin: -4em; padding: 1em; border-style: double; border-width: 5px; font-size: 18px; text-align: left; width: 80%;}
+.inputs {text-align: center; margin: auto;}
 
 /*---------------------------CSS Variables--------------------------------*/
 :root{
@@ -117,7 +118,7 @@ body {
   overflow: visible;
 }
 
-/*
+
 .bubbles-large > g {
           transform: translateY(2048px);
   opacity: 0;
@@ -169,7 +170,7 @@ body {
 .bubbles-large g:nth-of-type(5) circle {
           animation: wobble 3s infinite ease-in-out;
 }
-*/
+
 .bubbles-small {
   overflow: visible;
 }

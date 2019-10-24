@@ -19,88 +19,87 @@
       		<svg class="bubbles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701 1024" style="overflow: visible;">
         	
         	<g class="bubbles-large" stroke-width="7">           
-	            <g>
+	            <g id="g0">
 	                <g transform="translate(10 940)">
 	                    <circle id="big1" cx="35" cy="35" r="35">
 	                </g>
 	            </g>
-	            <!--
-	            <g>
+	            <g id="g1">
 	                <g transform="translate(373 940)">
-	                    <circle cx="35" cy="35" r=bigR/>
+	                    <circle id="big2" cx="35" cy="35" r="35"/>
 	                </g>
 	            </g>
-	            <g>
+	            <g id="g2">
 	                <g transform="translate(408 940)">
-	                    <circle cx="35" cy="35" r=bigR/>
+	                    <circle id="big3" cx="35" cy="35" r="35"/>
 	                </g>
 	            </g>
-	            <g>
+	            <g id="g3">
 	                <g transform="translate(621 940)">
-	                    <circle cx="35" cy="35" r=bigR/>
+	                    <circle id="big4" cx="35" cy="35" r="35"/>
 	                </g>
 	            </g>
-	            <g>
+	            <g id="g4">
 	                <g transform="translate(179 940)">
-	                    <circle cx="35" cy="35" r=bigR/>
+	                    <circle id="big5" cx="35" cy="35" r="35"/>
 	                </g>
 	            </g>
--->
+
         	</g>
-<!--
+
         	<g class="bubbles-small" stroke-width="4">
-	            <g>
+	            <g id="g5">
 	                <g transform="translate(147 984)">
-	                    <circle cx="15" cy="15" r="15"/>
+	                    <circle id="small1" cx="15" cy="15" r="15"/>
 	                </g>
 	            </g>
-	            <g>
+	            <g id="g6">
 	                <g transform="translate(255 984)">
-	                    <circle cx="15" cy="15" r="15"/>
+	                    <circle id="small2" cx="15" cy="15" r="15"/>
 	                </g>
 	            </g>
-	            <g>
+	            <g id="g7">
 	                <g transform="translate(573 984)">
-	                    <circle cx="15" cy="15" r="15"/>
+	                    <circle id="small3" cx="15" cy="15" r="15"/>
 	                </g>
 	            </g>
-	            <g>
+	            <g id="g8">
 	                <g transform="translate(429 984)">
-	                    <circle cx="15" cy="15" r="15"/>
+	                    <circle id="small4" cx="15" cy="15" r="15"/>
 	                </g>
 	            </g>
-	            <g>
+	            <g id="g9">
 	                <g transform="translate(91 984)">
-	                    <circle cx="15" cy="15" r="15"/>
+	                    <circle id="small5" cx="15" cy="15" r="15"/>
 	                </g>
 	            </g>
-	            <g>
+	            <g id="g10">
 	                <g transform="translate(640 984)">
-	                    <circle cx="15" cy="15" r="15"/>
+	                    <circle id="small6" cx="15" cy="15" r="15"/>
 	                </g>
 	            </g>
-	            <g>
+	            <g id="g11">
 	                <g transform="translate(321 984)">
-	                    <circle cx="15" cy="15" r="15"/>
+	                    <circle id="small7" cx="15" cy="15" r="15"/>
 	                </g>
 	            </g>
-	            <g>
+	            <g id="g12">
 	                <g transform="translate(376 984)">
-	                    <circle cx="15" cy="15" r="15"/>
+	                    <circle id="small8" cx="15" cy="15" r="15"/>
 	                </g>
 	            </g>
-	            <g>
+	            <g id="g13">
 	                <g transform="translate(376 984)">
-	                    <circle cx="15" cy="15" r="15"/>
+	                    <circle id="small9" cx="15" cy="15" r="15"/>
 	                </g>
 	            </g>
-	            <g>
+	            <g id="g14">
 	                <g transform="translate(497 984)">
-	                    <circle cx="15" cy="15" r="15"/>
+	                    <circle id="small10" cx="15" cy="15" r="15"/>
 	                </g>
 	            </g>
         	</g>
--->
+
         	</svg>
 
       	</div>
@@ -109,18 +108,29 @@
       <div class="centerBox">
       	<p>World</p>
       	<div class="content" id="noClick">
-      		blah
+      		<div style="text-align: center">
+      			<h2><a href="https://1000mileworld.com/about/#author">Joe Liang</a></h2>
+      			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Check out a Flexbox panel design and have some fun with bubbles :)" data-show-count="false">Share</a>
+      			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<a href="https://twitter.com/1000mileworld?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @1000mileworld</a>
+				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+
+			<div class="inputs">
+				<label for="bcolor">Bubble Color</label>
+	    		<input id="bcolor" type="color" name="bcolor" value="#ffffff">
+
+	    		<label for="size"> Size: </label>
+	    		<input id="size" style="width: 100px;" type="range" name="size" min="10" max="90" value="30">
+
+	    		<label for="speed"> Speed: </label>
+	    		<input id="speed" style="width: 100px;" type="range" name="speed" min="10" max="100" value="50">
+	    	</div>
+	    	<br>
+      		As part of the <a href="https://www.100daysofcode.com/">100 Days of Code</a> challenge, I demonstrate in this project what I learned in the last few weeks on CSS Variables, Flexbox layout design, modifying DOM elements in Javascript, and animating graphics. For more web development goodies, head over to <a href="https://1000mileworld.com/"><strong>1000 Mile World</strong></a>. Meanwhile, have fun with the bubbles :)
       		<br>
       		<br>
-      		
-      		<label for="bcolor">Bubble Color</label>
-    		<input id="bcolor" type="color" name="bcolor" value="#ffffff">
-
-    		<label for="size"> Size Factor: </label>
-    		<input id="size" type="range" name="size" min="10" max="90" value="30">
-
-    		<label for="speed"> Speed Factor: </label>
-    		<input id="speed" type="range" name="speed" min="25" max="100" value="50">
+    		<div style="text-align: center"><a href="https://1000mileworld.com/neve-blog/">Blog</a> | <a href="https://1000mileworld.com/portfolio/">List of Projects</a></div>
       	</div>
       	
   	  </div>
@@ -136,6 +146,12 @@
 	    const panels = document.querySelectorAll('.panel');
 	    let inContent = false;
 
+	    t = []; //array that will store initial animation times
+	    for (let i=0; i<15; i++) {
+  			let duration = getComputedStyle(document.getElementById(`g${i}`)).getPropertyValue('animation-duration');
+  			t.push(duration.split('s')[0]);
+		}
+
 	    function toggleOpen(){
 	      if(!inContent){this.classList.toggle('open');} //adds class "open" if it's not there, remove it if it is
 	    }
@@ -147,7 +163,8 @@
 	      }
 	    }
 
-		window.onload = initDivMouseOver; //disable toggle if mouse is over content div box
+		//disable toggle if mouse is over content div box
+		window.onload = initDivMouseOver;
 		function initDivMouseOver()   {
 		   	let div = document.getElementById("noClick");
 			div.onmouseover = function()   {
@@ -160,6 +177,7 @@
 		   	}
 		}
 
+		//update flex panels
 		panels.forEach(panel => panel.addEventListener('click',toggleOpen));
 		panels.forEach(panel => panel.addEventListener('transitionend',toggleActive));
 
@@ -168,15 +186,29 @@
 		const inputs = document.querySelectorAll('input'); //returns node list
     
 	    function handleUpdate(){
-	      //const suffix = this.dataset.sizing || ''; //try to append px or nothing (for base color)
-	      document.documentElement.style.setProperty(`--${this.name}`,this.value);
-	      let size = getComputedStyle(document.documentElement).getPropertyValue('--size')/30*35;
-	      document.getElementById('big1').setAttribute('r', size);
+	      document.documentElement.style.setProperty(`--${this.name}`,this.value); //change bubble color
+	      
+	      //update bubble size
+	      let bigSize = getComputedStyle(document.documentElement).getPropertyValue('--size')/30*35;
+	      let smallSize = getComputedStyle(document.documentElement).getPropertyValue('--size')/30*15;
+
+	      for (let i=1; i<11; i++){
+	      	if (i<6){document.getElementById(`big${i}`).setAttribute('r', bigSize);}
+	      	document.getElementById(`small${i}`).setAttribute('r', smallSize);
+	      }
+	      
+	      //update bubble speed
+	      let sFactor = 50/getComputedStyle(document.documentElement).getPropertyValue('--speed');
+	      for (let i=0; i<15; i++){
+	      	document.getElementById(`g${i}`).style.animationDuration = t[i]*sFactor+'s';
+	      	console.log(getComputedStyle(document.getElementById('g0')).getPropertyValue('animation-duration'))
+	      }
 	    }
 
-	    //listen for change event on each of the inputs
+	    //update controls
 	    inputs.forEach(input => input.addEventListener('change', handleUpdate));
 	    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate)); //live update before you release mouse
+
 		</script>
 
 </body>
