@@ -48,11 +48,10 @@ body {
 .panel3 { background-image:url(horizon.jpg); }
 
 /* Flex Children, which are themselves another flex container */
-.panel > * {
+.panel > p, .panel > div {
   margin: 0;
   width: 100%;
   transition: transform 0.5s;
-  /*border: 1px solid red; for tracking elements on page*/
   flex: 1 0 auto; /*flex: flex-grow, flex-shrink, flex-basis*/;
   display: flex;
   justify-content: center; /*horizontal center*/
@@ -64,8 +63,18 @@ body {
 .panel > *:last-child {transform: translateY(100%);}
 .panel.open-active > *:last-child {transform: translateY(0);}
 
+/*-----------Center Panel Specifics-------------------*/
+
+/*
 .panel.center.open-active > *:first-child {transform: translateY(50%)}
 .panel.center.open-active > *:last-child {transform: translateY(-30%)}
+*/
+
+/*.centerPanelItem {flex: 1 0 auto; border:1px solid white;}*/
+/*.topCenter {flex: 1; style="border: 1px solid red;"}*/
+.bottomCenter {display: flex; flex-direction: column;}
+.bottomItem {flex: 1; border: 1px solid green; margin: 0; width: 100%;}
+/*------------------------------------------------------*/
 
 .panel p{
   text-transform: uppercase;
