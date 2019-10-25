@@ -48,7 +48,8 @@ body {
 .panel3 { background-image:url(horizon.jpg); }
 
 /* Flex Children, which are themselves another flex container */
-.panel > p, .panel > div {
+.panel > div {
+  border: 1px solid red;
   margin: 0;
   width: 100%;
   transition: transform 0.5s;
@@ -76,14 +77,14 @@ body {
 .bottomItem {flex: 1; border: 1px solid green; margin: 0; width: 100%;}
 /*------------------------------------------------------*/
 
-.panel p{
+.panel div{
   text-transform: uppercase;
   font-family: 'Amatic SC', cursive;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
   font-size: 2em;
 }
 
-.panel p:nth-child(2) {
+.panel div:nth-child(2) {
   font-size: 4em;
 }
 
