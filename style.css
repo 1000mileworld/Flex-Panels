@@ -49,7 +49,6 @@ body {
 
 /* Flex Children, which are themselves another flex container */
 .panel > div {
-  border: 1px solid red;
   margin: 0;
   width: 100%;
   transition: transform 0.5s;
@@ -64,17 +63,11 @@ body {
 .panel > *:last-child {transform: translateY(100%);}
 .panel.open-active > *:last-child {transform: translateY(0);}
 
-/*-----------Center Panel Specifics-------------------*/
+/*-----------Panel Specifics-------------------*/
 
-/*
-.panel.center.open-active > *:first-child {transform: translateY(50%)}
-.panel.center.open-active > *:last-child {transform: translateY(-30%)}
-*/
-
-/*.centerPanelItem {flex: 1 0 auto; border:1px solid white;}*/
-/*.topCenter {flex: 1; style="border: 1px solid red;"}*/
 .bottomCenter {display: flex; flex-direction: column;}
-.bottomItem {flex: 1; border: 1px solid green; margin: 0; width: 100%;}
+.bottomItem {flex: 1; margin: 0; width: 100%;}
+
 /*------------------------------------------------------*/
 
 .panel > div{

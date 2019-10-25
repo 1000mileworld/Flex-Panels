@@ -13,9 +13,9 @@
       <div>Miles</div>
     </div>
     <div class="panel panel2">
-
+    <div>
       	<div>1000</div>
-        <!--
+
       	<div class="bubbles-container">
       		<svg class="bubbles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701 1024" style="overflow: visible;">
         	
@@ -102,17 +102,15 @@
         	</g>
 
         	</svg>
--->
-      	 <!--bubble container-->
-         <!--bubble container + "1000"-->
 
-     <div>Mile</div>
+      	</div><!--bubble container-->
+    </div> <!--"1000" + bubble container-->
+
+    <div>Mile</div>
 
       
 	<div class="bottomCenter">
       	<div class="bottomItem">World</div>
-
-  
       
       	<div class="content" id="noClick">
       		<div style="text-align: center">
@@ -142,8 +140,6 @@
 
     </div><!--bottomCenter-->
 
-
-
  </div><!--entire center panel-->
 
     <div class="panel panel3">
@@ -157,13 +153,13 @@
 	    const panels = document.querySelectorAll('.panel');
 	    
 	    let inContent = false;
-/*
+
 	    t = []; //array that will store initial animation times
 	    for (let i=0; i<15; i++) {
   			let duration = getComputedStyle(document.getElementById(`g${i}`)).getPropertyValue('animation-duration');
   			t.push(duration.split('s')[0]);
 		}
-*/
+
 	    function toggleOpen(){
 	      if(!inContent){this.classList.toggle('open');} //adds class "open" if it's not there, remove it if it is
 	    }
@@ -174,7 +170,7 @@
 	        this.classList.toggle('open-active');
 	      }
 	    }
-/*
+
 		//disable toggle if mouse is over content div box
 		window.onload = initDivMouseOver;
 		function initDivMouseOver()   {
@@ -188,12 +184,12 @@
 		      	inContent = false;
 		   	}
 		}
-*/
+
 		//update flex panels
 		panels.forEach(panel => panel.addEventListener('click',toggleOpen));
 		panels.forEach(panel => panel.addEventListener('transitionend',toggleActive));
 
-/*
+
 		//controls
 		const inputs = document.querySelectorAll('input'); //returns node list
     
@@ -220,7 +216,7 @@
 	    //update controls
 	    inputs.forEach(input => input.addEventListener('change', handleUpdate));
 	    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate)); //live update before you release mouse
-*/
+
 		</script>
 
 </body>
