@@ -1,7 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>1000 Mile World</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Practice with Flexbox, SVG animation, CSS Variables, and Javascript DOM element traversal. Also, fun with bubbles!"/>
+  <meta name="author" content="Joe Liang" />
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:description" content="Practice with Flexbox, SVG animation, CSS Variables, and Javascript DOM element traversal. Also, fun with bubbles!" />
+  <meta name="twitter:title" content="Flexbox Panel with Bubbles" />
+  <meta name="twitter:image" content="https://1000mileworld.com/wp-content/uploads/2019/10/twitterCard-flexPanels.jpg" />
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140400287-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-140400287-1');
+	</script>
+
+
+	<title>Flexbox Panel with Bubbles</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -14,7 +35,7 @@
     </div>
     <div class="panel panel2">
     <div>
-      	<div>1000</div>
+      	<div class="topCenter">1000</div>
 
       	<div class="bubbles-container">
       		<svg class="bubbles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701 1024" style="overflow: visible;">
@@ -217,7 +238,7 @@
 	    inputs.forEach(input => input.addEventListener('change', handleUpdate));
 	    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate)); //live update before you release mouse
 
-		</script>
+	</script>
 
 </body>
 </html>
